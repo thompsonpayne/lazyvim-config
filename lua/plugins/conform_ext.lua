@@ -10,6 +10,8 @@ return {
         ["liquid"] = { "prettier" },
         -- you might also want to format HTML inside .liquid or other related types:
         ["html"] = { "prettier" },
+
+        templ = { "templ" },
         -- Add explicit JSON formatting - use jq for pure JSON, prettier for JSONC
         ["json"] = { "jq" },
         ["jsonc"] = { "prettier" },

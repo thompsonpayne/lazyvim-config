@@ -1,3 +1,14 @@
+if true then
+  return {
+    {
+      "folke/tokyonight.nvim",
+      opts = {
+        style = "night",
+      },
+    },
+  }
+end
+
 vim.api.nvim_set_hl(0, "MiniPickHeader", { fg = "#9DA5B4" }) -- Brighten NonText (for blank lines, end-of-line markers, etc)
 local function override_nontext()
   vim.api.nvim_set_hl(0, "NonText", { fg = "#5C6370" })
