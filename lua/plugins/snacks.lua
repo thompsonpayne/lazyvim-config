@@ -5,6 +5,7 @@ return {
     animate = {
       -- Set animation fps to 120
       fps = 120,
+      enabled = true,
     },
     picker = {
       sources = {

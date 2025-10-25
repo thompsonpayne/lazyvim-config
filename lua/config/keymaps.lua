@@ -4,6 +4,7 @@
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
 -- reliable plain API mapping
 vim.api.nvim_set_keymap("t", "<Esc>", [[<C-\><C-n>]], { noremap = false })
+
 -- vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = false })
 -- vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = false })
 -- vim.api.nvim_set_keymap("n", "<C-f>", "<C-f>zz", { noremap = false })

@@ -15,7 +15,7 @@ vim.opt.wrap = true
 vim.opt.backup = false
 vim.opt.writebackup = false
 if vim.g.neovide then
-  -- vim.g.snacks_animate = false
+  vim.g.snacks_animate = true
   vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
   vim.keymap.set("v", "<D-c>", '"+y') -- Copy
   vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
@@ -24,12 +24,11 @@ if vim.g.neovide then
   vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 
   vim.g.neovide_padding_bottom = 0
-
   -- 🖋️ Font
   vim.o.guifont = "JetBrainsMono Nerd Font:h16" -- adjust size as you like
 
   -- 🎯 Cursor
-  -- vim.g.neovide_cursor_smooth_blink = true
+  vim.g.neovide_cursor_smooth_blink = true
 
   vim.g.neovide_cursor_animation_length = 0.075 -- smoother but snappy
   -- vim.g.neovide_cursor_trail_size = 0.8
@@ -51,3 +50,13 @@ if vim.g.neovide then
   -- 🔤 Fix font rendering
   vim.opt.linespace = 2 -- adds vertical breathing room
 end
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#444444", bg = "NONE" })
+vim.api.nvim_set_hl(0, "VertSplit", { fg = "#444444", bg = "NONE" })
+
+-- LSP borders
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded",
+})
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = "rounded",
+})

@@ -1,22 +1,32 @@
-if true then
-  return {
-    {
-      "Mofiqul/vscode.nvim",
-      lazy = false,
-      priority = 1000,
-      config = function()
-        -- Apply the colorscheme
-        vim.cmd.colorscheme("vscode")
-      end,
-    },
-  }
-end
+-- if true then
+--   return {
+--     {
+--       "Mofiqul/vscode.nvim",
+--       lazy = false,
+--       priority = 1000,
+--       config = function()
+--         -- Apply the colorscheme
+--         vim.cmd.colorscheme("vscode")
+--       end,
+--     },
+--   }
+-- end
 if true then
   return {
     {
       "folke/tokyonight.nvim",
       opts = {
         style = "night",
+        on_colors = function(colors)
+          -- quick override if needed
+          colors.border = "#5C6370"
+        end,
+        on_highlights = function(hl, colors)
+          -- you can override specific highlights here
+          hl.WinSeparator = { fg = "#2f3846", bg = "NONE" }
+          hl.Visual = { bg = "#2f3e76" }
+          return hl
+        end,
       },
     },
   }
