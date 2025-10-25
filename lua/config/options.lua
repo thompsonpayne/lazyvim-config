@@ -52,11 +52,3 @@ if vim.g.neovide then
 end
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#444444", bg = "NONE" })
 vim.api.nvim_set_hl(0, "VertSplit", { fg = "#444444", bg = "NONE" })
-
--- LSP borders
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "rounded",
-})
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = "rounded",
-})
