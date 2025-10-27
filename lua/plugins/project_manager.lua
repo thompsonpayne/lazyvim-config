@@ -4,6 +4,22 @@ local wk = require("which-key")
 wk.add({
   { "<leader>m", group = "Manage projects" },
 })
+
+local function get_project_name()
+  local ok, session_manager = pcall(require, "session_manager")
+  if not ok then
+    return ""
+  end
+
+  local session = session_manager.current_session_name
+  if session then
+    -- Clean up the name if it includes path info
+    return vim.fn.fnamemodify(session, ":t:r")
+  end
+
+  -- fallback to project directory name
+  return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+end
 return {
   "coffebar/neovim-project",
   lazy = false,
@@ -21,7 +37,7 @@ return {
       "~/study/Go/*",
     },
     picker = {
-      type = "snacks", -- "telescope", "fzf-lua", or "snacks"
+      type = "fzf-lua", -- "telescope", "fzf-lua", or "snacks"
     },
     -- optional: last_session_on_startup = false, dashboard_mode = false, etc.
   },
