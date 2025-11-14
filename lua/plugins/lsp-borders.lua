@@ -21,4 +21,14 @@ return {
       return opts
     end,
   },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        float = {
+          border = "rounded", -- Can be "rounded", "single", "double", "solid"
+        },
+      },
+    },
+  },
 }

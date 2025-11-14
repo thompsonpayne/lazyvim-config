@@ -13,9 +13,9 @@ return {
     -- distance_stop_animating = 0.5, -- 0.1      > 0
 
     -- smooth cursor without smear
-    stiffness = 0.5,
-    trailing_stiffness = 0.5,
-    matrix_pixel_threshold = 0.5,
-    time_interval = 2, -- milliseconds
+    -- stiffness = 0.5,
+    -- trailing_stiffness = 0.5,
+    -- matrix_pixel_threshold = 0.5,
+    -- time_interval = 7, -- milliseconds
   },
 }

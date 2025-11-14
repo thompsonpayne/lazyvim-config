@@ -4,8 +4,14 @@ return {
   opts = {
     animate = {
       -- Set animation fps to 120
-      fps = 120,
+      -- fps = 120,
       enabled = true,
+    },
+    terminal = {
+      win = {
+        position = "float",
+        border = "rounded",
+      },
     },
     picker = {
       sources = {
