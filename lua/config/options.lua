@@ -28,7 +28,7 @@ if vim.g.neovide then
   vim.g.neovide_padding_left = 0
   vim.g.neovide_padding_bottom = 0
   -- 🖋️ Font
-  vim.o.guifont = "JetBrainsMono Nerd Font:h16" -- adjust size as you like
+  vim.o.guifont = "JetBrainsMono Nerd Font:h14" -- adjust size as you like
 
   -- 🎯 Cursor
   -- vim.g.neovide_cursor_smooth_blink = true
@@ -43,12 +43,16 @@ if vim.g.neovide then
 
   -- 💫 Scroll animation
   vim.g.neovide_scroll_animation_length = 0.15
-  vim.g.neovide_floating_blur_amount_x = 0
-  vim.g.neovide_floating_blur_amount_y = 0
+  -- vim.g.neovide_floating_blur_amount_x = 0
+  -- vim.g.neovide_floating_blur_amount_y = 0
 
   -- ⌨️ Key behavior tweaks
   vim.g.neovide_input_use_logo = true -- enable Cmd key on macOS
   vim.g.neovide_hide_mouse_when_typing = true
+
+  -- vim.g.neovide_opacity = 0.8
+  -- vim.g.neovide_normal_opacity = 0.8
+  -- vim.g.neovide_window_blurred = true
 end
 vim.opt.linespace = 2 -- adds vertical breathing room
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#444444", bg = "NONE" })

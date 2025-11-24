@@ -31,10 +31,12 @@ return {
   opts = {
     projects = {
       "~/jmco/*",
+      "~/jmco/",
       "~/.config/*",
       "~/work/*",
       "~/study/*",
       "~/study/Go/*",
+      "~/study/zig/*",
     },
     picker = {
       type = "fzf-lua", -- "telescope", "fzf-lua", or "snacks"

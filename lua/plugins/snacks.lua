@@ -16,6 +16,11 @@ return {
     picker = {
       sources = {
         explorer = {
+          auto_close = true,
+          layout = {
+            preset = "default",
+            preview = true,
+          },
           hidden = true,
           ignored = true,
           follow = true,
@@ -26,6 +31,7 @@ return {
           follow = true,
           exclude = {
             "**/.git/*",
+            "**/target/*",
             "**/node_modules/*",
             "**/.yarn/cache/*",
             "**/.yarn/releases/*",

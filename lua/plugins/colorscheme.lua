@@ -8,6 +8,9 @@ return {
   {
     "Mofiqul/vscode.nvim",
     lazy = true, -- We let LazyVim load it if it's the active scheme
+    opts = {
+      style = "dark",
+    },
   },
 
   -- ==========================================================================
@@ -29,7 +32,7 @@ return {
       style = "night",
       on_colors = function(colors)
         colors.border = "#5C6370"
-        colors.bg = "#0C0F12"
+        -- colors.bg = "#0C0F12"
       end,
       on_highlights = function(hl)
         hl.WinSeparator = { fg = "#2f3846", bg = "NONE" }

@@ -1,4 +1,7 @@
 -- lua/plugins/javascript-types.lua
+if true then
+  return {}
+end
 return {
   "neovim/nvim-lspconfig",
   opts = {
